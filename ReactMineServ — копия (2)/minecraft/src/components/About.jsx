@@ -1,6 +1,7 @@
 ﻿import engineerImage from '../Logo/Bloki/Injener.jpg'
 import optimizationImage from '../Logo/Bloki/Optimazion.png'
 import teamImage from '../Logo/Bloki/komanda.png'
+import languagesImage from '../Logo/Bloki/3yasika.png'
 
 export default function About() {
   return (
@@ -55,13 +56,19 @@ export default function About() {
               </p>
             </div>
           </article>
+
+          <article className="panel panel-media">
+            <div className="panel-media__visual" aria-hidden="true">
+              <img src={languagesImage} alt="" />
+            </div>
+            <div className="panel-media__content">
+              <h3>3 ключевых языка</h3>
+              <p>Python, C#, C++</p>
+            </div>
+          </article>
         </div>
 
         <div className="about-metrics">
-          <div>
-            <strong>3</strong>
-            <span>ключевых языка: Python, C#, C++</span>
-          </div>
           <div>
             <strong>∞</strong>
             <span>рост и самообучение</span>
