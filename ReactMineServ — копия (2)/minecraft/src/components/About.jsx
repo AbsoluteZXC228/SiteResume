@@ -67,17 +67,6 @@ export default function About() {
             </div>
           </article>
         </div>
-
-        <div className="about-metrics">
-          <div>
-            <strong>∞</strong>
-            <span>рост и самообучение</span>
-          </div>
-          <div>
-            <strong>100%</strong>
-            <span>ориентация на качество</span>
-          </div>
-        </div>
       </div>
     </section>
   )
