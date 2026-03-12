@@ -1122,3 +1122,16 @@ video {
   }
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
+#top,
+#about,
+#skills,
+#projects,
+#experience,
+#contact {
+  scroll-margin-top: 96px;
+}
