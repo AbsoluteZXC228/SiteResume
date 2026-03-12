@@ -22,7 +22,14 @@ export default function Header() {
 
     const syncFromPage = () => {
       const scrollY = window.scrollY + 160
+      const viewportBottom = window.scrollY + window.innerHeight
+      const pageBottom = document.documentElement.scrollHeight
       let nextHref = sectionIds[0]
+
+      if (pageBottom - viewportBottom <= 24) {
+        setActiveHref('#contact')
+        return
+      }
 
       for (const href of sectionIds) {
         const section = document.querySelector(href)
@@ -126,5 +133,6 @@ export default function Header() {
     </header>
   )
 }
+
 
 
