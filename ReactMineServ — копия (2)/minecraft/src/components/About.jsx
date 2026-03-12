@@ -1,11 +1,21 @@
-﻿import engineerImage from '../Logo/Bloki/Injener.jpg'
+import engineerImage from '../Logo/Bloki/Injener.jpg'
 import optimizationImage from '../Logo/Bloki/Optimazion.png'
 import teamImage from '../Logo/Bloki/komanda.png'
 import languagesImage from '../Logo/Bloki/3yasika.png'
 
 export default function About() {
   return (
-    <section id="about" className="section">
+    <section id="about" className="section about-section">
+      <div className="about-ambient" aria-hidden="true">
+        <div className="about-ambient__grid"></div>
+        <div className="about-ambient__orb about-ambient__orb-left"></div>
+        <div className="about-ambient__orb about-ambient__orb-right"></div>
+        <div className="about-ambient__beam about-ambient__beam-a"></div>
+        <div className="about-ambient__beam about-ambient__beam-b"></div>
+        <div className="about-ambient__ring about-ambient__ring-a"></div>
+        <div className="about-ambient__ring about-ambient__ring-b"></div>
+        <div className="about-ambient__noise"></div>
+      </div>
       <div className="container">
         <div className="section-heading">
           <p className="eyebrow">Обо мне</p>

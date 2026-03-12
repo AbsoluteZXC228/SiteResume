@@ -1135,6 +1135,225 @@ html {
 #contact {
   scroll-margin-top: 96px;
 }
+.about-section {
+  position: relative;
+}
 
+.about-ambient {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
 
+.about-ambient__grid,
+.about-ambient__orb,
+.about-ambient__beam,
+.about-ambient__ring,
+.about-ambient__noise {
+  position: absolute;
+}
 
+.about-ambient__grid {
+  inset: 8% 5% 10%;
+  border-radius: 36px;
+  background:
+    linear-gradient(rgba(120, 255, 218, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 255, 218, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(98, 255, 214, 0.12), transparent 62%);
+  background-size: 34px 34px, 34px 34px, auto;
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.9) 14%, rgba(0, 0, 0, 0.95) 86%, transparent 100%);
+  opacity: 0.42;
+  transform: perspective(1200px) rotateX(72deg) scale(1.08);
+  transform-origin: center top;
+  animation: aboutGridDrift 18s linear infinite;
+}
+
+.about-ambient__orb {
+  width: 28vw;
+  height: 28vw;
+  min-width: 240px;
+  min-height: 240px;
+  border-radius: 50%;
+  filter: blur(12px);
+  opacity: 0.26;
+}
+
+.about-ambient__orb-left {
+  top: 10%;
+  left: -6%;
+  background: radial-gradient(circle, rgba(102, 255, 204, 0.36) 0%, rgba(102, 255, 204, 0.12) 34%, transparent 72%);
+  animation: aboutOrbFloat 14s ease-in-out infinite;
+}
+
+.about-ambient__orb-right {
+  right: -8%;
+  bottom: 8%;
+  background: radial-gradient(circle, rgba(119, 104, 255, 0.28) 0%, rgba(119, 104, 255, 0.1) 34%, transparent 72%);
+  animation: aboutOrbFloat 18s ease-in-out infinite reverse;
+}
+
+.about-ambient__beam {
+  width: 42%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(128, 255, 225, 0.72), transparent);
+  box-shadow: 0 0 18px rgba(128, 255, 225, 0.28);
+  opacity: 0.46;
+}
+
+.about-ambient__beam-a {
+  top: 22%;
+  left: 8%;
+  transform: rotate(-12deg);
+  animation: aboutBeamSweep 9s ease-in-out infinite;
+}
+
+.about-ambient__beam-b {
+  right: 10%;
+  bottom: 24%;
+  transform: rotate(18deg);
+  animation: aboutBeamSweep 11s ease-in-out infinite reverse;
+}
+
+.about-ambient__ring {
+  border-radius: 50%;
+  border: 1px solid rgba(138, 92, 255, 0.2);
+  box-shadow: inset 0 0 42px rgba(138, 92, 255, 0.08);
+}
+
+.about-ambient__ring-a {
+  width: 320px;
+  height: 320px;
+  top: 18%;
+  right: 12%;
+  animation: aboutRingPulse 12s ease-in-out infinite;
+}
+
+.about-ambient__ring-b {
+  width: 180px;
+  height: 180px;
+  bottom: 16%;
+  left: 18%;
+  border-color: rgba(98, 255, 214, 0.2);
+  box-shadow: inset 0 0 32px rgba(98, 255, 214, 0.08);
+  animation: aboutRingPulse 10s ease-in-out infinite reverse;
+}
+
+.about-ambient__noise {
+  inset: 0;
+  opacity: 0.08;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.8) 0.7px, transparent 0.7px);
+  background-size: 18px 18px;
+  mix-blend-mode: screen;
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes aboutGridDrift {
+  0% {
+    transform: perspective(1200px) rotateX(72deg) translateY(0) scale(1.08);
+  }
+
+  50% {
+    transform: perspective(1200px) rotateX(72deg) translateY(12px) scale(1.1);
+  }
+
+  100% {
+    transform: perspective(1200px) rotateX(72deg) translateY(0) scale(1.08);
+  }
+}
+
+@keyframes aboutOrbFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(18px, -16px, 0) scale(1.06);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes aboutBeamSweep {
+  0% {
+    opacity: 0.14;
+    transform: translateX(-18px) rotate(-12deg);
+  }
+
+  50% {
+    opacity: 0.52;
+    transform: translateX(16px) rotate(-10deg);
+  }
+
+  100% {
+    opacity: 0.14;
+    transform: translateX(-18px) rotate(-12deg);
+  }
+}
+
+@keyframes aboutRingPulse {
+  0% {
+    transform: scale(0.94);
+    opacity: 0.28;
+  }
+
+  50% {
+    transform: scale(1.02);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(0.94);
+    opacity: 0.28;
+  }
+}
+
+@media (max-width: 980px) {
+  .about-ambient__grid {
+    inset: 14% -8% 12%;
+  }
+
+  .about-ambient__ring-a {
+    width: 220px;
+    height: 220px;
+    right: -4%;
+  }
+
+  .about-ambient__ring-b {
+    left: 6%;
+    bottom: 10%;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-ambient__beam,
+  .about-ambient__ring-b {
+    display: none;
+  }
+
+  .about-ambient__grid {
+    inset: 18% -24% 10%;
+    opacity: 0.28;
+  }
+
+  .about-ambient__orb {
+    min-width: 180px;
+    min-height: 180px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-ambient__grid,
+  .about-ambient__orb,
+  .about-ambient__beam,
+  .about-ambient__ring {
+    animation: none !important;
+  }
+}
