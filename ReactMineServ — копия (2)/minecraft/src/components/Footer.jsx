@@ -16,8 +16,8 @@
               <a href="mailto:andrey.tolkunov@email.ru">andrey.tolkunov@email.ru</a>
             </li>
             <li>
-              <a href="https://t.me/your_telegram" target="_blank" rel="noreferrer">
-                Telegram: @your_telegram
+              <a href="https://t.me/dsddas11112" target="_blank" rel="noreferrer">
+                Telegram: @dsddas11112
               </a>
             </li>
             <li>
