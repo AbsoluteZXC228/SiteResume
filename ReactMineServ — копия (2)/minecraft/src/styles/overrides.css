@@ -1492,3 +1492,43 @@ html {
     animation: none !important;
   }
 }
+.skills-section .skills-grid {
+  gap: 14px;
+}
+
+.skills-section .skill-card {
+  padding: 18px;
+}
+
+.skills-section .skill-card h3 {
+  font-size: 1rem;
+}
+
+.skills-section .skill-card ul {
+  margin-top: 10px;
+  padding-left: 16px;
+}
+
+.skills-section .skill-card li {
+  margin-bottom: 6px;
+  line-height: 1.45;
+  font-size: 0.94rem;
+}
+
+@media (max-width: 640px) {
+  .skills-section .skill-card {
+    padding: 16px;
+  }
+}
+.skills-section.section {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.skills-section .section-heading {
+  margin-bottom: 22px;
+}
+
+.skills-section .skills-extra {
+  margin-top: 14px;
+}
