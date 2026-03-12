@@ -80,8 +80,7 @@ export default function Header() {
       <div className="container header-inner">
         <a href="#top" className="brand" onClick={closeMenu}>
           <img src={serverLogo} alt="Логотип портфолио Андрея Толкунова" className="brand-logo" />
-          <span className="brand-ember">ANDREY</span>
-          <span className="brand-saga">TOLKUNOV</span>
+          <span className="brand-ember">senseless</span>
         </a>
 
         <button
@@ -127,3 +126,5 @@ export default function Header() {
     </header>
   )
 }
+
+

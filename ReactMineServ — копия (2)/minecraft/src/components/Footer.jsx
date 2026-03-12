@@ -4,7 +4,7 @@
       <div className="container footer-grid">
         <div>
           <h3>
-            <span className="brand-ember">ANDREY</span> <span className="brand-saga">TOLKUNOV</span>
+            <span className="brand-ember">SENSELESS</span>
           </h3>
           <p>Портфолио разработчика с фокусом на инженерии, производительности и надежных решениях.</p>
         </div>
@@ -39,7 +39,7 @@
       </div>
 
       <div className="container footer-copy">
-        <p>© 2026 Андрей Толкунов. Все права защищены.</p>
+        <p>© 2026 Senseless. Все права защищены.</p>
       </div>
     </footer>
   )
