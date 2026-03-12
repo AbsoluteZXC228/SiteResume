@@ -1,12 +1,12 @@
-﻿@font-face {
+@font-face {
   font-family: 'Minecraft';
   src: url('../assets/fonts/minecraft.ttf') format('truetype');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Sonic';
-  src: url('../assets/fonts/sonic-hud-c-italic.ttf') format('truetype');
+  font-family: 'Undertale';
+  src: url('../assets/fonts/Undertale-Battle-Font.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -37,7 +37,7 @@ body,
 }
 
 body {
-  font-family: 'Sonic', 'Segoe UI', sans-serif;
+  font-family: 'Undertale', 'Segoe UI', sans-serif;
   color: var(--text);
   background:
     radial-gradient(circle at top left, rgba(138, 92, 255, 0.24), transparent 32%),
@@ -349,7 +349,7 @@ video {
 .hero h1,
 .hero .eyebrow,
 .hero-subline {
-  font-family: 'Minecraft', 'Sonic', sans-serif;
+  font-family: 'Minecraft', 'Undertale', sans-serif;
 }
 
 .hero h1 {
@@ -1135,3 +1135,6 @@ html {
 #contact {
   scroll-margin-top: 96px;
 }
+
+
+

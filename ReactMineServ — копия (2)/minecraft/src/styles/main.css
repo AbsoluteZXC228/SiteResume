@@ -31,7 +31,7 @@ body,
 }
 
 body {
-  font-family: 'Sonic', 'Cascadia Code', 'JetBrains Mono', 'Consolas', monospace;
+  font-family: 'Undertale', 'Cascadia Code', 'JetBrains Mono', 'Consolas', monospace;
   color: var(--text);
   background:
     radial-gradient(circle at 82% -6%, rgba(167, 95, 255, 0.38), transparent 46%),
@@ -71,7 +71,7 @@ a {
 }
 
 .brand {
-  font-family: 'Sonic', 'Cascadia Code', monospace;
+  font-family: 'Undertale', 'Cascadia Code', monospace;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -170,7 +170,7 @@ a {
 }
 
 .hero h1 {
-  font-family: 'Sonic', 'Cascadia Code', monospace;
+  font-family: 'Undertale', 'Cascadia Code', monospace;
   margin: 0;
   font-size: clamp(2rem, 6vw, 4rem);
   letter-spacing: 0.04em;
@@ -487,10 +487,12 @@ a {
   }
 }
 .hero-landing h1 {
-  font-family: 'Minecraft', 'Sonic', 'Trebuchet MS', sans-serif;
+  font-family: 'Minecraft', 'Undertale', 'Trebuchet MS', sans-serif;
 }
 
 .hero-landing .eyebrow,
 .hero-landing .hero-subline {
-  font-family: 'Minecraft', 'Sonic', 'Trebuchet MS', sans-serif;
+  font-family: 'Minecraft', 'Undertale', 'Trebuchet MS', sans-serif;
 }
+
+
