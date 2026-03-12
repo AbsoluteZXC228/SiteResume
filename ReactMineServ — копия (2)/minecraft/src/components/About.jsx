@@ -14,6 +14,10 @@ export default function About() {
         <div className="about-ambient__beam about-ambient__beam-b"></div>
         <div className="about-ambient__ring about-ambient__ring-a"></div>
         <div className="about-ambient__ring about-ambient__ring-b"></div>
+        <div className="about-ambient__scan"></div>
+        <div className="about-ambient__node about-ambient__node-a"></div>
+        <div className="about-ambient__node about-ambient__node-b"></div>
+        <div className="about-ambient__node about-ambient__node-c"></div>
         <div className="about-ambient__noise"></div>
       </div>
       <div className="container">

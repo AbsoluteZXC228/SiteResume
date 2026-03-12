@@ -124,7 +124,7 @@ video {
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 1px;
+  height: 2px;
   background: linear-gradient(90deg, transparent, rgba(138, 92, 255, 0.9), transparent);
 }
 
@@ -1151,6 +1151,8 @@ html {
 .about-ambient__orb,
 .about-ambient__beam,
 .about-ambient__ring,
+.about-ambient__scan,
+.about-ambient__node,
 .about-ambient__noise {
   position: absolute;
 }
@@ -1159,12 +1161,12 @@ html {
   inset: 8% 5% 10%;
   border-radius: 36px;
   background:
-    linear-gradient(rgba(120, 255, 218, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(120, 255, 218, 0.08) 1px, transparent 1px),
-    radial-gradient(circle at 50% 50%, rgba(98, 255, 214, 0.12), transparent 62%);
+    linear-gradient(rgba(120, 255, 218, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(120, 255, 218, 0.14) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(98, 255, 214, 0.2), transparent 62%);
   background-size: 34px 34px, 34px 34px, auto;
   mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.9) 14%, rgba(0, 0, 0, 0.95) 86%, transparent 100%);
-  opacity: 0.42;
+  opacity: 0.68;
   transform: perspective(1200px) rotateX(72deg) scale(1.08);
   transform-origin: center top;
   animation: aboutGridDrift 18s linear infinite;
@@ -1176,30 +1178,30 @@ html {
   min-width: 240px;
   min-height: 240px;
   border-radius: 50%;
-  filter: blur(12px);
-  opacity: 0.26;
+  filter: blur(10px);
+  opacity: 0.64;
 }
 
 .about-ambient__orb-left {
   top: 10%;
   left: -6%;
-  background: radial-gradient(circle, rgba(102, 255, 204, 0.36) 0%, rgba(102, 255, 204, 0.12) 34%, transparent 72%);
+  background: radial-gradient(circle, rgba(102, 255, 204, 0.54) 0%, rgba(102, 255, 204, 0.22) 34%, transparent 72%);
   animation: aboutOrbFloat 14s ease-in-out infinite;
 }
 
 .about-ambient__orb-right {
   right: -8%;
   bottom: 8%;
-  background: radial-gradient(circle, rgba(119, 104, 255, 0.28) 0%, rgba(119, 104, 255, 0.1) 34%, transparent 72%);
+  background: radial-gradient(circle, rgba(119, 104, 255, 0.42) 0%, rgba(119, 104, 255, 0.18) 34%, transparent 72%);
   animation: aboutOrbFloat 18s ease-in-out infinite reverse;
 }
 
 .about-ambient__beam {
   width: 42%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(128, 255, 225, 0.72), transparent);
-  box-shadow: 0 0 18px rgba(128, 255, 225, 0.28);
-  opacity: 0.46;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(128, 255, 225, 0.96), transparent);
+  box-shadow: 0 0 26px rgba(128, 255, 225, 0.46);
+  opacity: 0.72;
 }
 
 .about-ambient__beam-a {
@@ -1218,8 +1220,8 @@ html {
 
 .about-ambient__ring {
   border-radius: 50%;
-  border: 1px solid rgba(138, 92, 255, 0.2);
-  box-shadow: inset 0 0 42px rgba(138, 92, 255, 0.08);
+  border: 1px solid rgba(138, 92, 255, 0.34);
+  box-shadow: inset 0 0 52px rgba(138, 92, 255, 0.14), 0 0 38px rgba(138, 92, 255, 0.12);
 }
 
 .about-ambient__ring-a {
@@ -1235,14 +1237,14 @@ html {
   height: 180px;
   bottom: 16%;
   left: 18%;
-  border-color: rgba(98, 255, 214, 0.2);
-  box-shadow: inset 0 0 32px rgba(98, 255, 214, 0.08);
+  border-color: rgba(98, 255, 214, 0.34);
+  box-shadow: inset 0 0 44px rgba(98, 255, 214, 0.14), 0 0 26px rgba(98, 255, 214, 0.1);
   animation: aboutRingPulse 10s ease-in-out infinite reverse;
 }
 
 .about-ambient__noise {
   inset: 0;
-  opacity: 0.08;
+  opacity: 0.38;
   background-image: radial-gradient(rgba(255, 255, 255, 0.8) 0.7px, transparent 0.7px);
   background-size: 18px 18px;
   mix-blend-mode: screen;
@@ -1283,17 +1285,17 @@ html {
 
 @keyframes aboutBeamSweep {
   0% {
-    opacity: 0.14;
+    opacity: 0.38;
     transform: translateX(-18px) rotate(-12deg);
   }
 
   50% {
-    opacity: 0.52;
+    opacity: 0.86;
     transform: translateX(16px) rotate(-10deg);
   }
 
   100% {
-    opacity: 0.14;
+    opacity: 0.38;
     transform: translateX(-18px) rotate(-12deg);
   }
 }
@@ -1301,17 +1303,63 @@ html {
 @keyframes aboutRingPulse {
   0% {
     transform: scale(0.94);
-    opacity: 0.28;
+    opacity: 0.44;
   }
 
   50% {
     transform: scale(1.02);
-    opacity: 0.5;
+    opacity: 0.72;
   }
 
   100% {
     transform: scale(0.94);
-    opacity: 0.28;
+    opacity: 0.44;
+  }
+}
+@keyframes aboutScanSweep {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.38;
+  }
+
+  50% {
+    transform: translateY(88%);
+    opacity: 0.64;
+  }
+
+  100% {
+    transform: translateY(180%);
+    opacity: 0;
+  }
+}
+
+@keyframes aboutNodeFloat {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(14px, -10px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes aboutNodePulse {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
   }
 }
 
@@ -1334,13 +1382,15 @@ html {
 
 @media (max-width: 640px) {
   .about-ambient__beam,
-  .about-ambient__ring-b {
+  .about-ambient__ring-b,
+  .about-ambient__scan,
+  .about-ambient__node-c {
     display: none;
   }
 
   .about-ambient__grid {
     inset: 18% -24% 10%;
-    opacity: 0.28;
+    opacity: 0.44;
   }
 
   .about-ambient__orb {
@@ -1353,7 +1403,9 @@ html {
   .about-ambient__grid,
   .about-ambient__orb,
   .about-ambient__beam,
-  .about-ambient__ring {
+  .about-ambient__ring,
+  .about-ambient__scan,
+  .about-ambient__node {
     animation: none !important;
   }
 }
