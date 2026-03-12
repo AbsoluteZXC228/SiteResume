@@ -1,3 +1,4 @@
+import SkillsMatrixRain from './SkillsMatrixRain'
 const skillSets = [
   {
     title: 'Python',
@@ -22,7 +23,13 @@ const extraSkills = [
 
 export default function ServerMap() {
   return (
-    <section id="skills" className="section section-alt">
+    <section id="skills" className="section section-alt skills-section">
+      <div className="skills-ambient" aria-hidden="true">
+        <SkillsMatrixRain />
+        <div className="skills-ambient__vignette"></div>
+        <div className="skills-ambient__glow skills-ambient__glow-left"></div>
+        <div className="skills-ambient__glow skills-ambient__glow-right"></div>
+      </div>
       <div className="container">
         <div className="section-heading">
           <p className="eyebrow">Навыки</p>

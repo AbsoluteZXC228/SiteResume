@@ -1161,9 +1161,9 @@ html {
   inset: 8% 5% 10%;
   border-radius: 36px;
   background:
-    linear-gradient(rgba(120, 255, 218, 0.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(120, 255, 218, 0.14) 1px, transparent 1px),
-    radial-gradient(circle at 50% 50%, rgba(98, 255, 214, 0.2), transparent 62%);
+    linear-gradient(rgba(190, 124, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(190, 124, 255, 0.12) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(160, 102, 255, 0.2), transparent 62%);
   background-size: 34px 34px, 34px 34px, auto;
   mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.9) 14%, rgba(0, 0, 0, 0.95) 86%, transparent 100%);
   opacity: 0.68;
@@ -1185,22 +1185,22 @@ html {
 .about-ambient__orb-left {
   top: 10%;
   left: -6%;
-  background: radial-gradient(circle, rgba(102, 255, 204, 0.54) 0%, rgba(102, 255, 204, 0.22) 34%, transparent 72%);
+  background: radial-gradient(circle, rgba(177, 112, 255, 0.46) 0%, rgba(177, 112, 255, 0.18) 34%, transparent 72%);
   animation: aboutOrbFloat 14s ease-in-out infinite;
 }
 
 .about-ambient__orb-right {
   right: -8%;
   bottom: 8%;
-  background: radial-gradient(circle, rgba(119, 104, 255, 0.42) 0%, rgba(119, 104, 255, 0.18) 34%, transparent 72%);
+  background: radial-gradient(circle, rgba(123, 88, 255, 0.4) 0%, rgba(123, 88, 255, 0.16) 34%, transparent 72%);
   animation: aboutOrbFloat 18s ease-in-out infinite reverse;
 }
 
 .about-ambient__beam {
   width: 42%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(128, 255, 225, 0.96), transparent);
-  box-shadow: 0 0 26px rgba(128, 255, 225, 0.46);
+  background: linear-gradient(90deg, transparent, rgba(190, 124, 255, 0.9), transparent);
+  box-shadow: 0 0 26px rgba(190, 124, 255, 0.34);
   opacity: 0.72;
 }
 
@@ -1237,15 +1237,15 @@ html {
   height: 180px;
   bottom: 16%;
   left: 18%;
-  border-color: rgba(98, 255, 214, 0.34);
-  box-shadow: inset 0 0 44px rgba(98, 255, 214, 0.14), 0 0 26px rgba(98, 255, 214, 0.1);
+  border-color: rgba(190, 124, 255, 0.28);
+  box-shadow: inset 0 0 44px rgba(190, 124, 255, 0.12), 0 0 26px rgba(190, 124, 255, 0.08);
   animation: aboutRingPulse 10s ease-in-out infinite reverse;
 }
 
 .about-ambient__noise {
   inset: 0;
   opacity: 0.38;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.8) 0.7px, transparent 0.7px);
+  background-image: radial-gradient(rgba(226, 198, 255, 0.7) 0.7px, transparent 0.7px);
   background-size: 18px 18px;
   mix-blend-mode: screen;
 }
@@ -1406,6 +1406,89 @@ html {
   .about-ambient__ring,
   .about-ambient__scan,
   .about-ambient__node {
+    animation: none !important;
+  }
+}
+
+.skills-section {
+  position: relative;
+}
+
+.skills-ambient {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(28, 10, 52, 0.2), rgba(8, 5, 18, 0.92));
+}
+
+.skills-matrix-canvas,
+.skills-ambient__vignette,
+.skills-ambient__glow {
+  position: absolute;
+  inset: 0;
+}
+
+.skills-matrix-canvas {
+  width: 100%;
+  height: 100%;
+  opacity: 0.78;
+  mask-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.86) 64%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.86) 64%, transparent 100%);
+}
+
+.skills-ambient__vignette {
+  background:
+    radial-gradient(circle at 50% 50%, transparent 26%, rgba(8, 5, 18, 0.24) 62%, rgba(8, 5, 18, 0.78) 100%),
+    linear-gradient(180deg, rgba(8, 5, 18, 0.76), rgba(8, 5, 18, 0.14) 26%, rgba(8, 5, 18, 0.18) 72%, rgba(8, 5, 18, 0.8));
+}
+
+.skills-ambient__glow {
+  filter: blur(34px);
+  opacity: 0.34;
+}
+
+.skills-ambient__glow-left {
+  background: radial-gradient(circle at 18% 36%, rgba(190, 124, 255, 0.42) 0%, transparent 32%);
+  animation: skillsMatrixGlow 10s ease-in-out infinite;
+}
+
+.skills-ambient__glow-right {
+  background: radial-gradient(circle at 80% 68%, rgba(130, 94, 255, 0.34) 0%, transparent 30%);
+  animation: skillsMatrixGlow 14s ease-in-out infinite reverse;
+}
+
+.skills-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes skillsMatrixGlow {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.22;
+  }
+
+  50% {
+    transform: translate3d(12px, -10px, 0) scale(1.08);
+    opacity: 0.42;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.22;
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-matrix-canvas {
+    opacity: 0.62;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-ambient__glow {
     animation: none !important;
   }
 }
