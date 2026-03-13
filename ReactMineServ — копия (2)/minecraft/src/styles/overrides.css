@@ -2181,3 +2181,11 @@ html {
     width: 100%;
   }
 }
+@media (min-width: 981px) {
+  #about,
+  #skills,
+  #projects,
+  #experience {
+    min-height: 100svh;
+  }
+}
