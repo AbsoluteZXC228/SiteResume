@@ -1,21 +1,22 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+﻿import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import serverLogo from '../Logo/logo.jpg'
+import { useLanguage } from '../context/LanguageContext'
 
-const navItems = [
-  { href: '#about', label: 'Обо мне' },
-  { href: '#skills', label: 'Навыки' },
-  { href: '#projects', label: 'Проекты' },
-  { href: '#experience', label: 'Опыт' },
-  { href: '#contact', label: 'Контакты' },
-]
+const languages = ['ru', 'en']
 
 export default function Header() {
+  const { language, setLanguage, t } = useLanguage()
+  const navItems = t.header.nav
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeHref, setActiveHref] = useState('#about')
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, opacity: 0 })
+  const [languageIndicatorStyle, setLanguageIndicatorStyle] = useState({ left: 0, width: 0, opacity: 0 })
 
   const capsuleRef = useRef(null)
   const linkRefs = useRef({})
+  const languageCapsuleRef = useRef(null)
+  const languageRefs = useRef({})
 
   useEffect(() => {
     const sectionIds = navItems.map((item) => item.href)
@@ -55,7 +56,7 @@ export default function Header() {
       window.removeEventListener('resize', syncFromPage)
       window.removeEventListener('hashchange', syncFromPage)
     }
-  }, [])
+  }, [navItems])
 
   useLayoutEffect(() => {
     const updateIndicator = () => {
@@ -78,7 +79,30 @@ export default function Header() {
     window.addEventListener('resize', updateIndicator)
 
     return () => window.removeEventListener('resize', updateIndicator)
-  }, [activeHref, isMenuOpen])
+  }, [activeHref, isMenuOpen, navItems])
+
+  useLayoutEffect(() => {
+    const updateLanguageIndicator = () => {
+      const activeEl = languageRefs.current[language]
+      const capsule = languageCapsuleRef.current
+
+      if (!activeEl || !capsule) {
+        setLanguageIndicatorStyle((prev) => ({ ...prev, opacity: 0 }))
+        return
+      }
+
+      setLanguageIndicatorStyle({
+        left: activeEl.offsetLeft,
+        width: activeEl.offsetWidth,
+        opacity: 1,
+      })
+    }
+
+    updateLanguageIndicator()
+    window.addEventListener('resize', updateLanguageIndicator)
+
+    return () => window.removeEventListener('resize', updateLanguageIndicator)
+  }, [language, isMenuOpen])
 
   const closeMenu = () => setIsMenuOpen(false)
 
@@ -86,14 +110,14 @@ export default function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <a href="#top" className="brand" onClick={closeMenu}>
-          <img src={serverLogo} alt="Логотип портфолио Андрея" className="brand-logo" />
+          <img src={serverLogo} alt={t.header.brandAlt} className="brand-logo" />
           <span className="brand-ember">senseless</span>
         </a>
 
         <button
           type="button"
           className="menu-toggle"
-          aria-label="Открыть меню"
+          aria-label={t.header.menuAria}
           aria-expanded={isMenuOpen}
           onClick={() => setIsMenuOpen((prev) => !prev)}
         >
@@ -125,14 +149,30 @@ export default function Header() {
             </div>
           </div>
 
+          <div className="language-switcher" aria-label={t.header.languageAria}>
+            <div className="fancy-menu__capsule language-switcher__capsule" ref={languageCapsuleRef}>
+              <span className="fancy-menu__indicator" style={languageIndicatorStyle} />
+              {languages.map((item) => (
+                <button
+                  key={item}
+                  type="button"
+                  ref={(node) => {
+                    languageRefs.current[item] = node
+                  }}
+                  className={`fancy-menu__link language-switcher__button ${language === item ? 'is-active' : ''}`}
+                  onClick={() => setLanguage(item)}
+                >
+                  {item.toUpperCase()}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <a className="btn btn-small header-cta" href="#contact" onClick={closeMenu}>
-            Связаться
+            {t.header.cta}
           </a>
         </nav>
       </div>
     </header>
   )
 }
-
-
-

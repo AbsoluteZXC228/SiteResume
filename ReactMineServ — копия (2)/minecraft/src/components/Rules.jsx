@@ -1,49 +1,8 @@
-const projects = [
-  {
-    title: 'Сервис аналитики матчей',
-    role: 'Backend-разработка',
-    stack: 'Python, PostgreSQL, REST API',
-    items: [
-      'Сбор и нормализация событий в единую модель',
-      'Кэширование запросов и ускорение выдачи статистики',
-      'Чистая структура модулей с тестами',
-    ],
-  },
-  {
-    title: 'Инструмент автоматизации билдов',
-    role: 'Скрипты и Dev-процессы',
-    stack: 'C#, PowerShell, CI',
-    items: [
-      'Автоматическое формирование релизов и артефактов',
-      'Проверки качества до сборки',
-      'Логи и диагностические отчеты для команды',
-    ],
-  },
-  {
-    title: 'Высокопроизводительный модуль',
-    role: 'Оптимизация ядра',
-    stack: 'C++, STL, профилирование',
-    items: [
-      'Снижение задержек в критических участках',
-      'Оптимизация памяти и алгоритмов',
-      'Документирование решений и ограничений',
-    ],
-  },
-]
-
-const focusStrong = [
-  'Стабильность под нагрузкой',
-  'Прозрачная архитектура',
-  'Скорость разработки без потери качества',
-]
-
-const focusGuard = [
-  'Сырые функции без тестов',
-  'Непредсказуемые зависимости',
-  'Случайный магический код',
-]
+﻿import { useLanguage } from '../context/LanguageContext'
 
 export default function Rules() {
+  const { t } = useLanguage()
+
   return (
     <section id="projects" className="section projects-section">
       <div className="projects-ambient" aria-hidden="true">
@@ -61,16 +20,13 @@ export default function Rules() {
 
       <div className="container">
         <div className="section-heading">
-          <p className="eyebrow">Проекты</p>
-          <h2>Избранные работы</h2>
-          <p className="rules-note">
-            Ниже представлены примеры подходов и решений. При необходимости могу раскрыть детали,
-            сроки и метрики по каждому кейсу.
-          </p>
+          <p className="eyebrow">{t.projects.eyebrow}</p>
+          <h2>{t.projects.title}</h2>
+          <p className="rules-note">{t.projects.note}</p>
         </div>
 
         <div className="rules-grid">
-          {projects.map((project) => (
+          {t.projects.cards.map((project) => (
             <article key={project.title} className="panel rule-panel">
               <h3>{project.title}</h3>
               <p className="project-meta">{project.role} • {project.stack}</p>
@@ -85,18 +41,18 @@ export default function Rules() {
 
         <div className="rules-quick-grid">
           <article className="quick-card quick-yes">
-            <h3>Что усиливаю</h3>
+            <h3>{t.projects.strongTitle}</h3>
             <ul>
-              {focusStrong.map((item) => (
+              {t.projects.strong.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </article>
 
           <article className="quick-card quick-no">
-            <h3>Чего избегаю</h3>
+            <h3>{t.projects.guardTitle}</h3>
             <ul>
-              {focusGuard.map((item) => (
+              {t.projects.guard.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>

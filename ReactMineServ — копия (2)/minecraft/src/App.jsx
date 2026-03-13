@@ -1,8 +1,11 @@
-import Home from './pages/Home'
+﻿import Home from './pages/Home'
+import { LanguageProvider } from './context/LanguageContext'
 
 function App() {
   return (
-    <Home />
+    <LanguageProvider>
+      <Home />
+    </LanguageProvider>
   )
 }
 

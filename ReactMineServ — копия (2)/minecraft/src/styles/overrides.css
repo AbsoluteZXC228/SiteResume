@@ -2146,3 +2146,38 @@ html {
     padding: 18px;
   }
 }
+.language-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.language-switcher__capsule {
+  min-width: 108px;
+}
+
+.language-switcher__button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.header-nav {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+@media (max-width: 980px) {
+  .language-switcher,
+  .language-switcher__capsule {
+    width: 100%;
+  }
+
+  .language-switcher__capsule {
+    justify-content: stretch;
+  }
+
+  .language-switcher__button {
+    width: 100%;
+  }
+}

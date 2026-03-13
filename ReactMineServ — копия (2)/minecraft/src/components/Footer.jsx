@@ -1,4 +1,8 @@
-﻿export default function Footer() {
+﻿import { useLanguage } from '../context/LanguageContext'
+
+export default function Footer() {
+  const { t } = useLanguage()
+
   return (
     <footer id="contact" className="site-footer">
       <div className="container footer-grid">
@@ -6,40 +10,35 @@
           <h3>
             <span className="brand-ember">SENSELESS</span>
           </h3>
-          <p>Портфолио разработчика с фокусом на инженерии, производительности и надежных решениях.</p>
+          <p>{t.footer.summary}</p>
         </div>
 
         <div>
-          <h4>Контакты</h4>
+          <h4>{t.footer.contactsTitle}</h4>
           <ul>
             <li>
               <a href="mailto:andrey.tolkunov@email.ru">andrey.tolkunov@email.ru</a>
             </li>
             <li>
-              <a href="https://t.me/dsddas11112" target="_blank" rel="noreferrer">
-                Telegram: @dsddas11112
-              </a>
-            </li>
-            <li>
               <a href="https://github.com/AbsoluteZXC228" target="_blank" rel="noreferrer">
-                GitHub: AbsoluteZXC228
+                {t.footer.github}
               </a>
             </li>
           </ul>
         </div>
 
         <div>
-          <h4>Фокус</h4>
+          <h4>{t.footer.focusTitle}</h4>
           <ul>
-            <li>Проекты на Python, C# и C++.</li>
-            <li>Оптимизация, backend, инфраструктура и инструменты.</li>
-            <li>Готов обсудить задачи, сроки и формат сотрудничества.</li>
+            {t.footer.focus.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ul>
         </div>
       </div>
 
       <div className="container footer-copy">
-        <p>© 2026 Senseless. Все права защищены.</p>
+        <p>{t.footer.copyright}</p>
       </div>
     </footer>
   )

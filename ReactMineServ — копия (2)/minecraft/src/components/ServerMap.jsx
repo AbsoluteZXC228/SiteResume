@@ -1,27 +1,9 @@
-import SkillsMatrixRain from './SkillsMatrixRain'
-const skillSets = [
-  {
-    title: 'Python',
-    items: ['Backend-логика', 'Скрипты и автоматизация', 'API и интеграции'],
-  },
-  {
-    title: 'C#',
-    items: ['.NET сервисы', 'Инструменты под Windows', 'Чистые архитектуры'],
-  },
-  {
-    title: 'C++',
-    items: ['Производительные модули', 'Алгоритмы', 'Низкоуровневые оптимизации'],
-  },
-]
-
-const extraSkills = [
-  'Git и командные процессы',
-  'Паттерны проектирования',
-  'Отладка и профилирование',
-  'Тестирование и качество',
-]
+﻿import SkillsMatrixRain from './SkillsMatrixRain'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function ServerMap() {
+  const { t } = useLanguage()
+
   return (
     <section id="skills" className="section section-alt skills-section">
       <div className="skills-ambient" aria-hidden="true">
@@ -32,13 +14,13 @@ export default function ServerMap() {
       </div>
       <div className="container">
         <div className="section-heading">
-          <p className="eyebrow">Навыки</p>
-          <h2>Технический профиль</h2>
-          <p className="rules-note">Языки и подходы, с которыми уверенно работаю каждый день.</p>
+          <p className="eyebrow">{t.skills.eyebrow}</p>
+          <h2>{t.skills.title}</h2>
+          <p className="rules-note">{t.skills.note}</p>
         </div>
 
         <div className="skills-grid">
-          {skillSets.map((skill) => (
+          {t.skills.cards.map((skill) => (
             <article key={skill.title} className="panel skill-card">
               <h3>{skill.title}</h3>
               <ul>
@@ -51,9 +33,9 @@ export default function ServerMap() {
         </div>
 
         <div className="skills-extra panel">
-          <h3>Дополнительно</h3>
+          <h3>{t.skills.extraTitle}</h3>
           <div className="skills-tags">
-            {extraSkills.map((item) => (
+            {t.skills.extra.map((item) => (
               <span key={item}>{item}</span>
             ))}
           </div>
