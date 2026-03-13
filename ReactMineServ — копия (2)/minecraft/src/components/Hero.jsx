@@ -14,7 +14,7 @@ export default function Hero() {
           <div className="hero-left">
             <p className="eyebrow">Портфолио разработчика</p>
             <h1>
-              <span className="brand-ember">Андрей</span> <span className="brand-saga">Толкунов</span>
+              <span className="brand-ember">Андрей</span>
             </h1>
             <p className="hero-subline">
               Python, C#, C++. Инженерный подход, аккуратная архитектура и стабильный результат.
@@ -37,8 +37,8 @@ export default function Hero() {
           </div>
 
           <div className="hero-right">
-            <div className="hero-photo" aria-label="Фотография Андрея Толкунова">
-              <img src={portfolioPhoto} alt="Андрей Толкунов" className="hero-photo-image" />
+            <div className="hero-photo" aria-label="Фотография">
+              <img src={portfolioPhoto} alt="Андрей" className="hero-photo-image" />
             </div>
           </div>
         </div>

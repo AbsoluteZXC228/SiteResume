@@ -86,7 +86,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <a href="#top" className="brand" onClick={closeMenu}>
-          <img src={serverLogo} alt="Логотип портфолио Андрея Толкунова" className="brand-logo" />
+          <img src={serverLogo} alt="Логотип портфолио Андрея" className="brand-logo" />
           <span className="brand-ember">senseless</span>
         </a>
 
