@@ -1,4 +1,4 @@
-﻿import projectPreview from '../Logo/logo1.jpg'
+﻿import projectPreview from '../Logo/logo.jpg'
 import { useLanguage } from '../context/LanguageContext'
 
 export default function Rules() {

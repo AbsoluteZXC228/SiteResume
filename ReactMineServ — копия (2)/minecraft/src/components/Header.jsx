@@ -1,5 +1,4 @@
 ﻿import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import serverLogo from '../Logo/logo.jpg'
 import { useLanguage } from '../context/LanguageContext'
 
 const languages = ['ru', 'en']
@@ -110,7 +109,6 @@ export default function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <a href="#top" className="brand" onClick={closeMenu}>
-          <img src={serverLogo} alt={t.header.brandAlt} className="brand-logo" />
           <span className="brand-ember">senseless</span>
         </a>
 
