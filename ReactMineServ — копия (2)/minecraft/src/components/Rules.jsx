@@ -45,7 +45,20 @@ const focusGuard = [
 
 export default function Rules() {
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section projects-section">
+      <div className="projects-ambient" aria-hidden="true">
+        <div className="projects-ambient__wash"></div>
+        <div className="projects-ambient__blueprint"></div>
+        <div className="projects-ambient__route projects-ambient__route-a"></div>
+        <div className="projects-ambient__route projects-ambient__route-b"></div>
+        <div className="projects-ambient__route projects-ambient__route-c"></div>
+        <div className="projects-ambient__module projects-ambient__module-a"></div>
+        <div className="projects-ambient__module projects-ambient__module-b"></div>
+        <div className="projects-ambient__module projects-ambient__module-c"></div>
+        <div className="projects-ambient__beacon projects-ambient__beacon-a"></div>
+        <div className="projects-ambient__beacon projects-ambient__beacon-b"></div>
+      </div>
+
       <div className="container">
         <div className="section-heading">
           <p className="eyebrow">Проекты</p>
