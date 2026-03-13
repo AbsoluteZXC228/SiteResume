@@ -30,7 +30,7 @@ export default function SkillsMatrixRain() {
       const totalColumns = Math.ceil(width / fontSize)
       columns = Array.from({ length: totalColumns }, () => ({
         y: Math.random() * -height,
-        speed: 0.38 + Math.random() * 0.72,
+        speed: 0.12 + Math.random() * 0.22,
         alpha: 0.18 + Math.random() * 0.36,
       }))
     }
@@ -76,7 +76,7 @@ export default function SkillsMatrixRain() {
 
         if (column.y > height + fontSize * 2 && Math.random() > 0.972) {
           column.y = Math.random() * -height * 0.4
-          column.speed = 0.38 + Math.random() * 0.72
+          column.speed = 0.12 + Math.random() * 0.22
           column.alpha = 0.18 + Math.random() * 0.36
         }
       })
