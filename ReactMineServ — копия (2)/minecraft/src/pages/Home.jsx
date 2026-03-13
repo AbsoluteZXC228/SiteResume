@@ -27,7 +27,17 @@ export default function Home() {
       .map((selector) => document.querySelector(selector))
       .filter(Boolean)
 
+    const isNearPageBottom = () => {
+      const viewportBottom = window.scrollY + window.innerHeight
+      const pageBottom = document.documentElement.scrollHeight
+      return pageBottom - viewportBottom <= 24
+    }
+
     const getCurrentSectionIndex = (sections, headerOffset) => {
+      if (isNearPageBottom()) {
+        return sections.length - 1
+      }
+
       const targetY = window.scrollY + headerOffset + 24
       let closestIndex = 0
 
