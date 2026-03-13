@@ -78,6 +78,7 @@
       note: 'Здесь постепенно собираю реальные кейсы. Первый проект уже оформлен как отдельная витрина с превью и акцентом на атмосферу.',
       cards: [
         {
+          id: 'reactmine',
           title: 'Сайт моего проекта по майнкрафту',
           role: 'Frontend и визуальная подача',
           stack: 'React, Vite, CSS-анимации',
@@ -86,6 +87,18 @@
             'Самописный плагин задает основную механику сервера и его уникальные правила',
             'Система городов формирует политическое взаимодействие между игроками',
             'Войны встроены в структуру мира как важная часть общего геймплея',
+          ],
+        },
+        {
+          id: 'plugin',
+          title: 'Самописный плагин сервера',
+          role: 'Игровая логика и серверные механики',
+          stack: 'Java, Spigot/Paper, кастомные системы',
+          summary: 'Ключевой модуль сервера, на котором строятся политика, города, войны и поведение мира под нужные правила проекта.',
+          items: [
+            'Управляет уникальными механиками, которые нельзя получить стандартными средствами',
+            'Связывает между собой города, конфликты, ограничения и развитие игроков',
+            'Дает проекту собственную идентичность и гибкость для новых режимов и событий',
           ],
         },
       ],
@@ -216,6 +229,7 @@
       note: 'This section is being filled with real cases. The first project is already presented as a featured showcase with a preview and a stronger visual identity.',
       cards: [
         {
+          id: 'reactmine',
           title: 'Website for my Minecraft project',
           role: 'Frontend and visual presentation',
           stack: 'React, Vite, CSS animations',
@@ -226,8 +240,19 @@
             'Wars are built into the world structure as an important part of the overall gameplay',
           ],
         },
+        {
+          id: 'plugin',
+          title: 'Custom server plugin',
+          role: 'Gameplay logic and server mechanics',
+          stack: 'Java, Spigot/Paper, custom systems',
+          summary: 'The core server module that powers politics, cities, wars, and world behavior under the exact rules of the project.',
+          items: [
+            'Controls unique mechanics that cannot be achieved with default tools alone',
+            'Connects cities, conflicts, restrictions, and player progression into one system',
+            'Gives the project its own identity and room for new modes and live events',
+          ],
+        },
       ],
-    },
     experience: {
       eyebrow: 'Experience',
       title: 'Skill Growth',
@@ -261,6 +286,7 @@
           ],
         },
       ],
+    },
     },
     footer: {
       summary: 'Developer portfolio focused on engineering, performance, and reliable solutions.',
