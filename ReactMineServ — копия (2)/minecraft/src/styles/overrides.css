@@ -399,7 +399,7 @@ video {
 .hero-photo {
   position: relative;
   width: min(420px, 100%);
-  aspect-ratio: 1 / 1.12;
+  aspect-ratio: 1 / 1.1;
   background: transparent;
   border: 1px solid rgba(214, 203, 255, 0.12);
   border-radius: 10px;
