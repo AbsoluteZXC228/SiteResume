@@ -75,43 +75,20 @@
     projects: {
       eyebrow: 'Проекты',
       title: 'Избранные работы',
-      note: 'Ниже представлены примеры подходов и решений. При необходимости могу раскрыть детали, сроки и метрики по каждому кейсу.',
+      note: 'Здесь постепенно собираю реальные кейсы. Первый проект уже оформлен как отдельная витрина с превью и акцентом на атмосферу.',
       cards: [
         {
-          title: 'Сервис аналитики матчей',
-          role: 'Backend-разработка',
-          stack: 'Python, PostgreSQL, REST API',
+          title: 'Сайт моего проекта по майнкрафту',
+          role: 'Frontend и визуальная подача',
+          stack: 'React, Vite, CSS-анимации',
+          summary: 'Лендинг-подача для Minecraft-проекта с полноэкранными секциями, атмосферными фонами, плавным перелистыванием блоков и стилизованным интерфейсом.',
           items: [
-            'Сбор и нормализация событий в единую модель',
-            'Кэширование запросов и ускорение выдачи статистики',
-            'Чистая структура модулей с тестами',
-          ],
-        },
-        {
-          title: 'Инструмент автоматизации билдов',
-          role: 'Скрипты и Dev-процессы',
-          stack: 'C#, PowerShell, CI',
-          items: [
-            'Автоматическое формирование релизов и артефактов',
-            'Проверки качества до сборки',
-            'Логи и диагностические отчеты для команды',
-          ],
-        },
-        {
-          title: 'Высокопроизводительный модуль',
-          role: 'Оптимизация ядра',
-          stack: 'C++, STL, профилирование',
-          items: [
-            'Снижение задержек в критических участках',
-            'Оптимизация памяти и алгоритмов',
-            'Документирование решений и ограничений',
+            'Сделан акцент на атмосфере проекта и цельной визуальной подаче',
+            'Добавлены анимированные секции и плавное переключение между экранами',
+            'Интерфейс готов для дальнейшего наполнения реальными материалами проекта',
           ],
         },
       ],
-      strongTitle: 'Что усиливаю',
-      strong: ['Стабильность под нагрузкой', 'Прозрачная архитектура', 'Скорость разработки без потери качества'],
-      guardTitle: 'Чего избегаю',
-      guard: ['Сырые функции без тестов', 'Непредсказуемые зависимости', 'Случайный магический код'],
     },
     experience: {
       eyebrow: 'Опыт',
@@ -236,43 +213,20 @@
     projects: {
       eyebrow: 'Projects',
       title: 'Selected Work',
-      note: 'Below are examples of approaches and solutions. If needed, I can share more details, timing, and metrics for each case.',
+      note: 'This section is being filled with real cases. The first project is already presented as a featured showcase with a preview and a stronger visual identity.',
       cards: [
         {
-          title: 'Match analytics service',
-          role: 'Backend development',
-          stack: 'Python, PostgreSQL, REST API',
+          title: 'Website for my Minecraft project',
+          role: 'Frontend and visual presentation',
+          stack: 'React, Vite, CSS animations',
+          summary: 'A landing-style presentation for a Minecraft project with fullscreen sections, atmospheric backgrounds, smooth section-to-section scrolling, and a stylized interface.',
           items: [
-            'Collected and normalized events into a unified data model',
-            'Cached requests to speed up statistics delivery',
-            'Kept the module structure clean and covered with tests',
-          ],
-        },
-        {
-          title: 'Build automation tool',
-          role: 'Scripts and Dev workflows',
-          stack: 'C#, PowerShell, CI',
-          items: [
-            'Automated release and artifact generation',
-            'Added quality checks before each build',
-            'Produced logs and diagnostic reports for the team',
-          ],
-        },
-        {
-          title: 'High-performance module',
-          role: 'Core optimization',
-          stack: 'C++, STL, profiling',
-          items: [
-            'Reduced latency in critical execution paths',
-            'Optimized memory usage and algorithms',
-            'Documented decisions and technical constraints',
+            'Built around the project mood and cohesive visual presentation',
+            'Includes animated sections and smooth transitions between screens',
+            'Prepared for future expansion with real project content and materials',
           ],
         },
       ],
-      strongTitle: 'What I strengthen',
-      strong: ['Stability under load', 'Transparent architecture', 'Delivery speed without losing quality'],
-      guardTitle: 'What I avoid',
-      guard: ['Untested raw features', 'Unpredictable dependencies', 'Random magic code'],
     },
     experience: {
       eyebrow: 'Experience',

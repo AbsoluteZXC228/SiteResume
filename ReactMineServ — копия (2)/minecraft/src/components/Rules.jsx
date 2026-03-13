@@ -1,4 +1,5 @@
-﻿import { useLanguage } from '../context/LanguageContext'
+﻿import projectPreview from '../Logo/logo1.jpg'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Rules() {
   const { t } = useLanguage()
@@ -25,38 +26,27 @@ export default function Rules() {
           <p className="rules-note">{t.projects.note}</p>
         </div>
 
-        <div className="rules-grid">
+        <div className="rules-grid rules-grid--featured">
           {t.projects.cards.map((project) => (
-            <article key={project.title} className="panel rule-panel">
-              <h3>{project.title}</h3>
-              <p className="project-meta">{project.role} • {project.stack}</p>
-              <ul>
-                {project.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+            <article key={project.title} className="panel rule-panel rule-panel--featured">
+              <div className="rule-panel__media">
+                <img src={projectPreview} alt={project.title} className="rule-panel__image" />
+                <div className="rule-panel__shine"></div>
+                <div className="rule-panel__glow"></div>
+              </div>
+
+              <div className="rule-panel__content">
+                <p className="project-meta">{project.role} • {project.stack}</p>
+                <h3>{project.title}</h3>
+                <p className="rule-panel__summary">{project.summary}</p>
+                <ul>
+                  {project.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </article>
           ))}
-        </div>
-
-        <div className="rules-quick-grid">
-          <article className="quick-card quick-yes">
-            <h3>{t.projects.strongTitle}</h3>
-            <ul>
-              {t.projects.strong.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-
-          <article className="quick-card quick-no">
-            <h3>{t.projects.guardTitle}</h3>
-            <ul>
-              {t.projects.guard.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
         </div>
       </div>
     </section>
