@@ -253,6 +253,7 @@
           ],
         },
       ],
+    },
     experience: {
       eyebrow: 'Experience',
       title: 'Skill Growth',
@@ -286,7 +287,6 @@
           ],
         },
       ],
-    },
     },
     footer: {
       summary: 'Developer portfolio focused on engineering, performance, and reliable solutions.',

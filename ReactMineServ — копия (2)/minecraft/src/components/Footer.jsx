@@ -17,7 +17,7 @@ export default function Footer() {
           <h4>{t.footer.contactsTitle}</h4>
           <ul>
             <li>
-              <a href="mailto:andrey.tolkunov@email.ru">andrey.tolkunov@email.ru</a>
+              <a href="mailto:senseless.dev@gmail.com">senseless.dev@gmail.com</a>
             </li>
             <li>
               <a href="https://github.com/AbsoluteZXC228" target="_blank" rel="noreferrer">
