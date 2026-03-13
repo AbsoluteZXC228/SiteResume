@@ -2189,3 +2189,19 @@ html {
     min-height: 100svh;
   }
 }
+body {
+  word-spacing: 0.08em;
+}
+
+.section-heading h2,
+.rules-note,
+.panel p,
+.rule-panel li,
+.quick-card li,
+.history-list li,
+.skill-card li,
+.footer-grid p,
+.footer-grid li,
+.hero-subline {
+  letter-spacing: 0.02em;
+}
