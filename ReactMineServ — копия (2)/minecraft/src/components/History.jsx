@@ -31,6 +31,20 @@
 export default function History() {
   return (
     <section id="experience" className="section history-section">
+      <div className="history-ambient" aria-hidden="true">
+        <div className="history-ambient__wash"></div>
+        <div className="history-ambient__path"></div>
+        <div className="history-ambient__arc history-ambient__arc-a"></div>
+        <div className="history-ambient__arc history-ambient__arc-b"></div>
+        <div className="history-ambient__arc history-ambient__arc-c"></div>
+        <div className="history-ambient__node history-ambient__node-a"></div>
+        <div className="history-ambient__node history-ambient__node-b"></div>
+        <div className="history-ambient__node history-ambient__node-c"></div>
+        <div className="history-ambient__node history-ambient__node-d"></div>
+        <div className="history-ambient__trail history-ambient__trail-a"></div>
+        <div className="history-ambient__trail history-ambient__trail-b"></div>
+      </div>
+
       <div className="container">
         <div className="section-heading">
           <p className="eyebrow">Опыт</p>
